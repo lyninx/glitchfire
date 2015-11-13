@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<script src="https://cdn.jsdelivr.net/vue/latest/vue.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/0.7.5/vue-router.js"></script>
+
+	</head>
+	<body>
+		<div id="app">
+			{{ message }}<br><br>
+			<input v-model="message" v-on:input="notify"><br>
+			<a v-link="{ path: '/foo' }">Go to Foo</a><br>
+    		<a v-link="{ path: '/bar' }">Go to Bar</a><br>
+    		<a v-link="{ path: '/' }">Go to Home</a><br>
+    		<router-view></router-view>
+		</div>
+		<script src="bundle.js"></script>
+		<script src="./bundle.js"></script>
+	</body>
+</html>
